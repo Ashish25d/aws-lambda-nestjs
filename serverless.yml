@@ -1,0 +1,27 @@
+service: aws-lambda
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: ap-south-1
+plugins:  
+  - serverless-prune-plugin
+  - serverless-plugin-typescript
+  - serverless-offline
+functions:
+  demoAWS:
+    name: aws-lambda-service
+    handler: src/handler.handler
+    description: demo aws lambda function
+    events:
+    - http:
+        method: any
+        path: /{any+}
+        integration: lambda-proxy
+        cors:
+          origins: "*"
+          headers:
+            - authorization
+            
+    
+

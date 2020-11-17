@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "sourceRoot": "src",
+    "outDir": ".build",
+    "moduleResolution": "node",
+    "rootDir": "./",
+    "incremental": true,
+    "tsBuildInfoFile": "./buildcache/nestjs",
+    "lib": [
+      "ES2015",
+      "ES2015.Promise",
+      "ES2016",
+      "DOM",
+      "ESNext.AsyncIterable"
+    ]
+  },
+  "include": [
+    "src/**/*",
+    "package.json"
+  ],
+  "exclude": [
+    "test/**/*",
+    "dist",
+    "node_modules/**/*",
+    ".git",
+    ".serverless",
+    ".vscode"
+  ],
+  "compileOnSave": true
+}
